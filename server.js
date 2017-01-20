@@ -3,7 +3,7 @@ var mongoClient = require('mongodb').MongoClient;
 var http = require("http");
 var url = require("url");
 var util = require("util");
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 var mongoUrl = 'mongodb://<uname>:<passwd>@<domain>:<port>/<db>'; // <-- your connection string goes here
 if(mongoUrl=='mongodb://<uname>:<passwd>@<domain>:<port>/<db>'){ // if no url provided
